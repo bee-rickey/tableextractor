@@ -1,3 +1,4 @@
+
 class OcrFactory:
 
     def __init__(self, type):
@@ -9,8 +10,8 @@ class OcrFactory:
             raise "Type of OCR is not specified"
 
         if self.type == "google":
-            return "google"
+            return GoogleOcr()
         elif self.type == "tesseract":
-            return "tesseract"
+            return TesseractOcr()
         else:
             raise "Unsupported OCR specified"
